@@ -1,0 +1,13 @@
+.footer {
+    text-align: center;
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p {
+    margin: 0; /* Remove any default margin */
+    color: #FD5668;
+}
+

@@ -1,0 +1,13 @@
+.description_container {
+    padding: 10px;
+    gap: 10px;
+    background-color: #27323A;
+    border-radius: 26px 26px 26px 26px;
+    -moz-border-radius: 26px 26px 26px 26px;
+    -webkit-border-radius: 26px 26px 26px 26px;
+    border: 2px solid #03051E;
+}
+
+.description_container h1, .description_container h3, .description_container h4, .description_container p {
+    color: #F8F0E5;
+}

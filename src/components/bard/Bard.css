@@ -1,0 +1,19 @@
+.bard_container {
+    border-left: 1px solid var(--color-border);
+    color: var(--color-bard);
+    background: var(--color-bard-bg);
+    padding: 5px;
+    min-width: 47%; 
+    border: 2px solid;
+    border-radius: 26px 26px 26px 26px;
+    -moz-border-radius: 26px 26px 26px 26px;
+    -webkit-border-radius: 26px 26px 26px 26px;
+}
+
+.bard_container h2 {
+    margin-top: 10px;
+}
+
+.bard_container p {
+    margin: auto 20px 20px 20px;
+}
