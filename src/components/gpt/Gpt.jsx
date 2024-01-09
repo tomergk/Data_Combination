@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import './Gpt.css';
 import { SiOpenai } from 'react-icons/si';
 import OpenAI from "openai";
+import while_gpt from '../../assets/images/while_gpt.gif';
 
 export default function Gpt({ thePrompt, setGptResponse }) {
   
+  const [loading, setLoading] = useState(false);
   const [gptAnswer, setGptAnswer] = useState('');
 
   useEffect(() => {
@@ -18,6 +20,9 @@ export default function Gpt({ thePrompt, setGptResponse }) {
   async function transform() {
 
     try {
+
+      setLoading(true); // Set loading to true when starting the API request
+
       const openai = new OpenAI({
         apiKey: process.env.REACT_APP_GPT_API_KEY,
         dangerouslyAllowBrowser: true,
@@ -35,12 +40,19 @@ export default function Gpt({ thePrompt, setGptResponse }) {
     catch (error) {
       console.error("Error making API request:", error);
     }
+    finally {
+      setLoading(false); // Set loading to false after the API request, regardless of success or failure
+    }
   }
 
   return (
     <div className='container gpt_container'>
       <h2><SiOpenai /></h2>
-      <p>{gptAnswer}</p>
+      {loading ? (
+        <img className='while' src={while_gpt} alt="Loading..." />
+      ) : (
+        <p>{gptAnswer}</p>
+      )}
     </div>
   );
 }

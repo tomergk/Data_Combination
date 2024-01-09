@@ -3,7 +3,7 @@ import Gpt from '../gpt/Gpt';
 import Bard from '../bard/Bard';
 import './Phase1.css';
 
-export default function Phase1({ userInput, setGptResponse, setBardResponse }) {
+export default function Phase1({ userInput, phase1GptResponse, phase1BardResponse }) {
 
   const [prompt, setPrompt] = useState('');
 
@@ -18,8 +18,8 @@ export default function Phase1({ userInput, setGptResponse, setBardResponse }) {
     <div className='general_container'>
       <h2 style={{ color: '#FE98AD' }}>Phase 1 - Individual Interpretation</h2>
       <div className='phase phase_one'>
-        <Gpt thePrompt={prompt} setGptResponse={setGptResponse} />
-        <Bard thePrompt={prompt} setBardResponse={setBardResponse} />
+        <Gpt thePrompt={prompt} setGptResponse={phase1GptResponse} />
+        <Bard thePrompt={prompt} setBardResponse={phase1BardResponse} />
       </div>
     </div>
   );

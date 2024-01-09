@@ -20,7 +20,6 @@ const Phase2 = ({ gptResponse, bardResponse }) => {
         const combination = `Please take these two pieces of information and combine them into one quality piece of information:
           1. ${gptResponse}
           2. ${bardResponse}`;
-        console.log(combination);
         setCombinedText(combination);
       }
     } 

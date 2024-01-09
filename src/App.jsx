@@ -38,8 +38,8 @@ const App = () => {
         onUserInputChange={handleUserInputChange} />
       <Phase1
         userInput={userInput}
-        setGptResponse={handleGptResponse}
-        setBardResponse={handleBardResponse}
+        phase1GptResponse={handleGptResponse}
+        phase1BardResponse={handleBardResponse}
       />
       <Phase2
         gptResponse={gptResponse}
