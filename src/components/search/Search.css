@@ -1,7 +1,7 @@
 .search_container {    
     display: flex;
     justify-content: center;
-    background:#001C30;
+    background:#2C303E;
     padding: 20px;
     border-radius: 26px 26px 26px 26px;
     -moz-border-radius: 26px 26px 26px 26px;
@@ -11,15 +11,17 @@
 
 form {
     display: flex;
-    width: 60%;
+    width: 95%;
     align-items: center;
     gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .searchArea {
     width: 100%; 
     padding: 10px; 
-    background: #27374D;
+    background: #43766C; /*2E7A9A*/
     border-radius: 10px;
     color: white;
 }

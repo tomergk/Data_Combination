@@ -25,9 +25,6 @@ To get started with our Cross Source Information Fusion system, follow these ste
 ## Contributing
 We welcome contributions from the community. If you have ideas for improvements, new features, or bug fixes, please feel free to submit a pull request.
 
-## License
-This project is licensed under the [MIT License](LICENSE).
-
 ## Contact
-If you have any questions or need assistance, you can reach out to us at [contact@email.com].
+If you have any questions or need assistance, you can reach out to us at [tomergk10@gmail.com].
 Thank you for choosing Cross Source Information Fusion! We hope you enjoy exploring the world of information with us.

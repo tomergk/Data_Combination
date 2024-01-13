@@ -16,7 +16,7 @@ export default function Phase1({ userInput, phase1GptResponse, phase1BardRespons
 
   return (
     <div className='general_container'>
-      <h2 style={{ color: '#FE98AD' }}>Phase 1 - Individual Interpretation</h2>
+      <h3 style={{ color: '#9DB2BF' }}>Phase 1 - Individual Interpretation</h3>
       <div className='phase phase_one'>
         <Gpt thePrompt={prompt} setGptResponse={phase1GptResponse} />
         <Bard thePrompt={prompt} setBardResponse={phase1BardResponse} />
