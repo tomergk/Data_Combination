@@ -3,11 +3,11 @@ import './Bard.css';
 import { RiBardLine } from 'react-icons/ri';
 import whilebard from '../../assets/images/while_bard.gif';
 
-export default function Bard({ thePrompt, setBardResponse }) {
+export default function Bard({ thePrompt, phase1BardResponse }) {
 
   const [loading, setLoading] = useState(false);
-  const [response, setResponse] = useState('');
-  const [flag, setFlag] = useState(false); // false on phase1, true on phase2
+  const [bardAnswer, setResponse] = useState('');
+  const [flag, setFlag] = useState(false); // To fix the "" problem: false on phase1, true on phase2
 
   useEffect(() => {
 
@@ -35,17 +35,17 @@ export default function Bard({ thePrompt, setBardResponse }) {
       if (!flag) {
         let trimmedRes = newRes.substring(1, newRes.length - 1);
         setResponse(trimmedRes);
-        setBardResponse(trimmedRes);
+        phase1BardResponse(trimmedRes);
         setFlag(!flag);
       }
       else {
         setResponse(newRes);
-        setBardResponse(newRes);
+        phase1BardResponse(newRes);
         setFlag(!flag);
       }
     }
     catch (error) {
-      console.error('Error sending request to server:', error);
+      console.error('Error sending API request to server:', error);
     }
     finally {
       setLoading(false); // Set loading to false after the API request, regardless of success or failure
@@ -58,7 +58,7 @@ export default function Bard({ thePrompt, setBardResponse }) {
       {loading ? (
         <img className='while' src={whilebard} alt="Loading..." />
       ) : (
-        <p>{response}</p>
+        <p>{bardAnswer}</p>
       )}
     </div>
   );

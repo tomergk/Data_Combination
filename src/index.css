@@ -46,7 +46,7 @@ html, body {
 }
 
 .general_container {
-  width: 70%;
+  width: var(--container-width-lg);
   padding: 20px;
   margin: auto;
 }
@@ -86,13 +86,13 @@ h3 {
   transform: translateX(-50%);
 }
 
-
-/* ============= MEDIA QUERIES (MEDIUM DEVICES (Tablets)) =============*/
-@media screen and (max-width: 1024px) {
-
-}
-
 /* ============= MEDIA QUERIES (SMALL DEVICES (Phones)) =============*/
 @media screen and (max-width: 600px) {
+
+.general_container {
+  width: var(--container-width-sm);
+  padding: 20px;
+  margin: auto;
+}
 
 }
